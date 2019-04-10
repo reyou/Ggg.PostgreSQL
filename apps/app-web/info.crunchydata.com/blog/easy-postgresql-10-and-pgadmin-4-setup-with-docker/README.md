@@ -1,0 +1,2 @@
+- Title: Easy PostgreSQL 10 and pgAdmin 4 Setup with Docker
+  - Url: https://info.crunchydata.com/blog/easy-postgresql-10-and-pgadmin-4-setup-with-docker
