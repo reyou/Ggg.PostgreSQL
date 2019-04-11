@@ -1,0 +1,2 @@
+$ pg_restore -U postgres -d dvdrental C:\temp\dvdrental.tar
+$ pg_restore -U postgres -d dvdrental /dockermount/dvdrental.tar

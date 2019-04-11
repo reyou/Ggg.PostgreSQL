@@ -1,0 +1,3 @@
+SELECT DISTINCT bcolor
+FROM t1
+ORDER BY bcolor;
