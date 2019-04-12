@@ -18,14 +18,19 @@ function main() {
             password: "password",
             port: 5432
         };
-        const client = new pg_1.Client(config);
         try {
-            yield client.connect();
-            const res = yield client.query("SELECT $1::text as message", [
-                "Hello world!"
-            ]);
+            const pool = new pg_1.Pool(config);
+            let res = yield pool.query("SELECT $1::text as message", ["Hello world!"]);
             console.log(res.rows[0].message); // Hello world!
+            yield pool.end();
+            // clients will also use environment variables
+            // for connection information
+            const client = new pg_1.Client(config);
+            yield client.connect();
+            res = yield client.query("SELECT NOW()");
+            console.log(JSON.stringify(res));
             yield client.end();
+            debugger;
         }
         catch (ex) {
             console.log(ex);
