@@ -41,6 +41,8 @@ $ psql -d postgres -U me
 
 ```
 $ CREATE DATABASE api;
+$ GRANT ALL PRIVILEGES ON TABLE users TO me;
+$ GRANT USAGE, SELECT ON SEQUENCE users_id_seq TO me;
 ```
 
 Use the \list command to see the available databases.
