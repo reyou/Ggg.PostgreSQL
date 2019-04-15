@@ -1,0 +1,31 @@
+{
+  "name": "intro1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
+    "watch": "tsc --watch",
+    "test": "mocha --require ts-node/register test/**/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/pg": "^7.4.14",
+    "pg": "^7.9.0",
+    "ts-postgres": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.2",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.3"
+  }
+}
