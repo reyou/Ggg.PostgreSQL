@@ -16,8 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/pg": "^7.4.14",
-    "pg": "^7.9.0",
-    "ts-postgres": "^1.0.2"
+    "pg": "^7.9.0"   
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
